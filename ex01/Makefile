@@ -14,6 +14,8 @@ OBJ = $(SRC:.cpp=.o)
 #regle principale
 all: $(TARGET)
 
+re: clean all
+
 #compilation de l'executable
 $(TARGET) : $(OBJ)
 	$(CXX) $(CXXFLAGS) -o$(TARGET) $(OBJ)
