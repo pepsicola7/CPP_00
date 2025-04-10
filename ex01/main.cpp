@@ -6,7 +6,7 @@
 /*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:22:52 by peli              #+#    #+#             */
-/*   Updated: 2025/04/08 17:29:46 by peli             ###   ########.fr       */
+/*   Updated: 2025/04/10 15:35:59 by peli             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,43 @@ void	signal_handler(int signum)
 	std::exit(signum);
 }
 
+int	entre_add(int index)
+{
+	Contact contact;
+	std::string	phonenumbre;
+	std::string	darkestsecret;
+
+	index++;
+	return (index);
+}
+
 int	main()
 {
 	Phonebook	Phonebook;
+	Contact		Contact;
 	std::string	line;
-	std::string	firstname;
-	std::string	lastname;
-	std::string	nickname;
+	int	index;
+
 	signal(SIGINT, signal_handler);
+	index = 1;
 	while (1)
-	{
+	{	
+		if (index == 9)
+			index = 1;
 		std::getline(std::cin, line);
 		if (line == "ADD")
-		{
-			int	index;
-
-			index = 1;
-			std::cout << " first name : ";
-			std::getline(std::cin, line);
-			Contact 
-		}
+			Contact.add_index(index);
+			Contact.add_firstName();
+			Contact.add_lastName();
+			Contact.add_nickName();
+			Contact.add_phonenumber();
+			Contact.add_darkestsecret();
 		if (line == "SEARCH")
 		{
 			
 		}
 		if (line == "EXIT")
-		{
 			std::exit(0);
-		}
 		// std::cout << line << std::endl;
 	}
 	// if (line == "HELLO")
