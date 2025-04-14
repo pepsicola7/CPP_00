@@ -40,7 +40,36 @@ void	Contact::add_darkestsecret()
 		std::cout << "Darkest secret : ";
 	m_contact[5] = m_darkestsecret;
 }
-void Contact::search_solo(int	i)
+
+void	Contact::get_firstname()
+{
+	std::cout << m_contact[1] << std::endl;
+	if (m_firstname.length() > 10)
+		std::cout << m_firstname.substr(0, 9) << ".";
+	else
+		std::cout << std::setw(10) << m_firstname ;
+	std::cout << "|" ; 
+}
+
+void	Contact::get_lastname()
+{
+	if (m_lastname.length() > 10)
+		std::cout << m_lastname.substr(0, 9) << ".";
+	else
+		std::cout << std::setw(10) << m_lastname ;
+	std::cout << "|" ; 
+}
+
+void	Contact::get_nickname()
+{
+	if (m_nickname.length() > 10)
+		std::cout << m_nickname.substr(0, 9) << ".";
+	else
+		std::cout << std::setw(10) << m_nickname ;
+	std::cout << "|" << std::endl; 
+}
+
+void Contact::search_solo(int i)
 {
 	std::cout << "Index       : " << i << std::endl;
 	std::cout << "Firstname   : " << m_contact[1] << std::endl;

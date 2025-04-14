@@ -2,9 +2,13 @@
 #define CONTACT_HPP
 
 
-#include <string>
+#include <string.h>
 #include <iostream>
 #include <dirent.h>
+#include <stdio.h>
+#include <iomanip>
+#include <cctype>
+#include <cstdlib>
 class	Contact
 {
 	public:
@@ -14,6 +18,9 @@ class	Contact
 	void	add_nickName();
 	void	add_phonenumber();
 	void	add_darkestsecret();
+	void	get_firstname();
+	void	get_lastname();
+	void	get_nickname();
 	void	search_solo(int i);
 
 	private:
