@@ -4,12 +4,12 @@
 
 void Phonebook::add_contact(int index)
 {
-	Contact[index - 1].add_index(index);
-	Contact[index - 1].add_firstName();
-	Contact[index - 1].add_lastName();
-	Contact[index - 1].add_nickName();
-	Contact[index - 1].add_phonenumber();
-	Contact[index - 1].add_darkestsecret();
+	Contacts[index - 1].add_index(index);
+	Contacts[index - 1].add_firstName();
+	Contacts[index - 1].add_lastName();
+	Contacts[index - 1].add_nickName();
+	Contacts[index - 1].add_phonenumber();
+	Contacts[index - 1].add_darkestsecret();
 }
 void Phonebook::display_contact(int index)
 {
@@ -19,14 +19,13 @@ void Phonebook::display_contact(int index)
 	std::cout << "     Index|First name| Last name|  Nickname" << std::endl;
 	while (i < index - 1)
 	{
-		Contact[i].get_firstname();
-		Contact[i].get_lastname();
-		Contact[i].get_nickname();
+		Contacts[i].get_firstname();
+		Contacts[i].get_lastname();
+		Contacts[i].get_nickname();
 		i++;
 	}
 }
 void Phonebook::search_contact(int i)
 {
-	std::cout << "index : " << i - 1 << Contact[i - 1].get_nickname() << std::endl;
-	Contact[i - 1].search_solo();
+	Contacts[i - 1].search_solo();
 }

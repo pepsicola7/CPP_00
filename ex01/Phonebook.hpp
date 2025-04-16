@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: peli <peli@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: peiqi <peiqi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 15:22:44 by peli              #+#    #+#             */
-/*   Updated: 2025/04/15 17:06:01 by peli             ###   ########.fr       */
+/*   Updated: 2025/04/16 12:14:00 by peiqi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	Phonebook
 	void	search_contact(int i);
 
 	private:
-	Contact	Contact[8];
+	Contact	Contacts[8];
 };
 
 #endif
